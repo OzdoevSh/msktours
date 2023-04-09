@@ -1,0 +1,100 @@
+.table{
+	border: 1px solid #eee;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 20px;
+  font-size: 20px;
+}
+.table th {
+	font-weight: bold;
+	padding: 30px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.table td{
+	padding: 30px;
+	border: 1px solid #eee;
+	text-align: left;
+}
+.table tbody tr:nth-child(odd){
+	background: #fff;
+}
+.table tbody tr:nth-child(even){
+	background: #F7F7F7;
+}
+
+.tabs{
+  display: flex;
+  font-size: 40px;
+  justify-content: space-between;
+  border: 5px solid black;
+  margin-bottom: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.tabsel{
+  height: 100px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  background: white;
+  cursor: pointer;
+}
+
+.tabsel:hover{
+  background: rgb(226, 223, 223);
+  color: black;
+}
+
+.tabsel:nth-child(2){
+  border-left: 5px solid black;
+  cursor: pointer;
+}
+
+.switcher{
+  display: flex;
+  width: 240px;
+  height: 40px;
+  border: 2px solid black;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.yes{
+  height: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.no{
+  height: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.yes:hover{
+  background: gray;
+}
+
+.no:hover{
+  background: gray;
+}
+
+.btnbthh{
+  margin: 0 auto;
+}
