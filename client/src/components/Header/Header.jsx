@@ -10,7 +10,7 @@ import './Header.css'
 const HeaderStyle = styled.div`
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: white;
   font-size: 24px;
 `
 const NavItem = styled.div`
@@ -21,13 +21,13 @@ const NavItem = styled.div`
 
 const Nav = styled(NavLink)`
   white-space: nowrap;
-  color: white;
+  color: black;
   padding: 40px 25px;
   text-decoration: none;
   font-weight: bold;
   margin-left: ${props => props.size || "0px"};
   :hover {
-    color: #white;
+    color: #black;
     text-decoration: underline;
   }
   @media (max-width: 800px) {
@@ -83,7 +83,7 @@ const Header = observer(() => {
               : <>
               <NavItem>
                     {/*<LogoImg src={logo2} alt={"logo"}></LogoImg>*/}
-                    {user.User.role === "USER" && <Nav to="/InfoProject">Главная</Nav>}
+                    <Nav to="/InfoProject">Главная</Nav>
                     <Nav to="/CityList"> Список экскурсий</Nav>
                     {user.User.role === "ADMIN" ?
                     <>

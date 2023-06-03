@@ -1,12 +1,14 @@
 import React from 'react';
 import { observer } from "mobx-react-lite";
-import main from '../../assets/main.jpg'
+import main from '../../assets/collage.jpg'
 import MyInput from '../../UI/MyInput/MyInput';
 import MyButton from '../../UI/MyButton/MyButton';
 import { createCall } from '../../http/callApi';
 import { useState } from 'react';
 import InputMask from "react-input-mask";
 import { createQ } from '../../http/questionApi';
+import slider from '../../assets/slider.jpeg'
+import abcd from '../../assets/abcd.png'
 
 const InfoProject = () => {
     const [ph, setPh] = useState(null)
@@ -41,14 +43,18 @@ const InfoProject = () => {
     };
 
     return (
-        <div style={{ width: '100vw', marginTop: '100px', display: 'flex' }}>
-            <div style={{ textAlign: 'center', width: '50%' }}>
-                <h1>Россия – не просто Лучшая страна земли - это место, где песня может «плыть», а сердце «петь»</h1>
+        <>
+          <img src={slider} width={1920}/>
+          <img src={abcd} width={1920}/>
+          <h1 style={{position: 'absolute', top: '500px', left: '50px', fontSize: '60px', fontWeight: 'bold', color: 'white'}}>Экскурсии по России</h1>
+          <div style={{ width: '100vw', marginTop: '100px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ textAlign: 'center', marginTop: '-40px', marginLeft: '0px'}}>
+                <h1 style={{fontSize: '50px', }}>Россия – не просто Лучшая страна земли - это место, где песня может «плыть», а сердце «петь»</h1>
 
-                <img src={main} width={700} />
+                <img src={main} width={1700} />
             </div>
 
-            <div style={{ width: '50%', padding: '100px 40px' }}>
+            <div style={{ width: '50%', padding: '100px 40px', marginLeft: '400px' }}>
                 <InputMask mask="+7\ (999) 999 99-99" value={ph} onChange={onHandleChange}>
                     {(inputProps) => (
                         <MyInput  {...inputProps} placeholder="Номер телефона"/>
@@ -71,6 +77,8 @@ const InfoProject = () => {
             </div>
 
         </div>
+        </>
+     
     );
 };
 
